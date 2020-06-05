@@ -18,7 +18,18 @@ class SerializationTools {
 	 */
 	static byte[] serialize(Serializable o) throws IOException {
 		//TODO complete
-		return null;
+		ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+		ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream);
+
+		try {
+			objectOutputStream.writeObject(o);
+			objectOutputStream.flush();
+
+			byte[] tab = byteArrayOutputStream.toByteArray();
+			return tab;
+		} catch (Exception e){
+			throw e;
+		}
 	}
 
 	/**
