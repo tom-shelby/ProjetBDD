@@ -33,6 +33,8 @@ public class TestSerialization {
 		{
 
 		}
+
+
 		try
 		{
 			SerializationTools.serializeFreeSpaceIntervals(null);
